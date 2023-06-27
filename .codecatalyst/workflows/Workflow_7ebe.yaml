@@ -1,0 +1,15 @@
+Name: Workflow_7ebe
+SchemaVersion: "1.0"
+
+Triggers:
+  - Type: PULLREQUEST
+    Events:
+      - OPEN
+      - REVISION
+      - CLOSED
+
+Actions:
+  DeployDev:
+    Identifier: aws/workflows-mock-beta@v1
+    Configuration:
+      MillisecondDelay: 1000
